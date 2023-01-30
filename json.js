@@ -75,3 +75,8 @@ btnStart.addEventListener('click', () => {
 //start counting
 
 //stop counting
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
+newFeature();
