@@ -31,8 +31,9 @@ const countDown = document.querySelector('.timer');
 const btnStart = document.querySelector('.button-start');
 const btnStop = document.querySelector('.button-stop');
 const btnReset = document.querySelector('.button-reset');
-
+const titleOfPage = document.querySelector('.Title');
 const containerApp = document.querySelector('body');
+
 const updateCountDown = function () {
   const clock = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
@@ -47,6 +48,7 @@ const updateCountDown = function () {
         containerApp.style.backgroundColor = 'Red';
       }
     }
+    titleOfPage.textContent = `Keep learning! ${min}:${sec}`;
   };
   let time = 1500;
 
@@ -54,7 +56,7 @@ const updateCountDown = function () {
 
   const resetCountdown = function () {
     countDown.textContent = `25:00`;
-
+    titleOfPage.textContent = `Take a breatch!`;
     clearInterval(timer);
   };
 
@@ -73,11 +75,3 @@ btnStart.addEventListener('click', () => {
   containerApp.style.backgroundColor = '';
 });
 //start counting
-
-//stop counting
-const newFeature = function () {
-  console.log('Welcome to the application');
-};
-
-newFeature();
-console.log('sss');

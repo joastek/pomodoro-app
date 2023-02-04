@@ -105,7 +105,7 @@ h1 {
   font-size: 7rem;
   padding: 5rem;
 }
-.controlPanel {
+.controlPanel-container {
   margin-top: 4rem;
   margin-bottom: 4rem;
   margin-left: auto;
