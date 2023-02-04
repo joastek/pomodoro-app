@@ -80,3 +80,4 @@ const newFeature = function () {
 };
 
 newFeature();
+console.log('sss');
