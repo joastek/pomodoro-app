@@ -73,5 +73,23 @@ const updateCountDown = function () {
 btnStart.addEventListener('click', () => {
   updateCountDown();
   containerApp.style.backgroundColor = '';
+  console.log('welcome');
 });
 //start counting
+
+const makeNegative = function (e) {
+  if (e > 0) {
+    console.log(`-${e}`);
+  } else {
+    console.log(`${e}`);
+  }
+};
+
+console.log(makeNegative(0.12));
+function spinWords(string) {
+  return string.replace(/\w{5,}/g, function (w) {
+    return w.split('').reverse().join('');
+  });
+}
+
+console.log(btnStop);

@@ -14,28 +14,75 @@ body {
 h1 {
   font-family: 'Unbounded', cursive;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  height: 4rem;
 }
-.accordion-part {
-  background-color: beige;
-  height: 500px;
-  padding-top: 50px;
+
+.headers {
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  text-align: right;
+  font-size: 1.75rem;
+  color: black;
+  word-spacing: 2rem;
+  font-weight: bold;
 }
+.header-1 {
+  text-decoration: none;
+  color: black;
+}
+.header-2 {
+  text-decoration: none;
+  color: black;
+}
+.header-3 {
+  text-decoration: none;
+  color: black;
+}
+.header-4 {
+  text-decoration: none;
+  color: black;
+}
+.header-5 {
+  text-decoration: none;
+  color: black;
+}
+.header-6 {
+  position: absolute;
+  left: 2rem;
+  text-decoration: none;
+  color: black;
+}
+.instruction {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+  /* height: 200px; */
+  background-color: white;
+  height: 5rem;
+  border-radius: 7rem;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 2.5rem var(--clr-neon);
+}
+
 .accordion {
   font-family: 'Unbounded', cursive;
-  width: 60%;
-  max-width: 1000;
+  width: 60rem;
+  max-width: 50rem;
   margin: 3rem auto;
-  background-color: beige;
+  background-color: var(--clr-bg);
+  margin-bottom: 10rem;
+  padding: 2rem;
 }
 
 .accordion-item {
   background-color: azure;
   padding: 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px var(--clr-neon);
   margin: 0.5rem 0;
 }
 
@@ -74,7 +121,13 @@ h1 {
   padding: 0.5rem;
   line-height: 1rem;
   border-top: 0.1rem solid;
-  border-image: linear-gradient(to right, transparent, #008f68, transparent) 1;
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--clr-neon),
+      transparent
+    )
+    1;
 }
 
 .logo-container {
@@ -92,13 +145,13 @@ h1 {
 .timer-container {
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 32rem;
   /* height: 200px; */
   background-color: white;
   text-align: center;
   border-radius: 7rem;
-  margin-top: 40px;
-  box-shadow: 0 0 25px rgba(11, 127, 227, 0.25);
+  margin-top: 10rem;
+  box-shadow: 0 0 5rem var(--clr-neon);
 }
 .timer {
   text-align: center;
@@ -129,9 +182,12 @@ h1 {
   display: inline-block;
   margin-right: 1rem;
   position: relative;
+  width: 20rem;
 }
 
-.button-stop::before {
+.button-stop::before,
+.button-start::before,
+.button-reset::before {
   content: '';
   position: absolute;
   background: var(--clr-neon);
@@ -144,32 +200,10 @@ h1 {
 
   pointer-events: none;
 }
-.button-start::before {
-  content: '';
-  position: absolute;
-  background: var(--clr-neon);
-  top: 120%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: perspective(1em) rotateX(30deg) scale(0.8, 0.4);
-  filter: blur(1em);
-  cursor: auto;
-}
-.button-reset::before {
-  content: '';
-  position: absolute;
-  background: var(--clr-neon);
-  top: 120%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: perspective(1em) rotateX(30deg) scale(0.8, 0.4);
-  filter: blur(1em);
-  cursor: auto;
-}
 
-.button-stop::after {
+.button-stop::after,
+.button-start::after,
+.button-reset::after {
   content: '';
   position: absolute;
   top: 0;
@@ -181,10 +215,16 @@ h1 {
   opacity: 0;
 }
 .button-stop:hover,
-.button-stop:focus {
+.button-stop:focus,
+.button-start:hover,
+.button-start:focus,
+.button-reset:hover,
+.button-reset:focus {
   background: var(--clr-neon);
   color: var(--clr-bg);
 }
-.button-stop:hover::after {
+.button-stop:hover::after,
+.button-start:hover::after,
+.button-reset:hover::after {
   opacity: 1;
 }
