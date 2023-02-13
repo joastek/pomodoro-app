@@ -28,28 +28,23 @@ h1 {
   color: black;
   word-spacing: 2rem;
   font-weight: bold;
+  max-height: 5rem;
+  position: relative;
+}
+.sticky .headers {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.9;
+  z-index: 1;
 }
 .header-1 {
   text-decoration: none;
   color: black;
 }
 .header-2 {
-  text-decoration: none;
-  color: black;
-}
-.header-3 {
-  text-decoration: none;
-  color: black;
-}
-.header-4 {
-  text-decoration: none;
-  color: black;
-}
-.header-5 {
-  text-decoration: none;
-  color: black;
-}
-.header-6 {
   position: absolute;
   left: 2rem;
   text-decoration: none;
@@ -68,6 +63,13 @@ h1 {
   box-shadow: 0 0 2.5rem var(--clr-neon);
 }
 
+.part-1 {
+  padding: 2rem;
+}
+.accordion-container {
+  padding: 0.5rem;
+  margin-bottom: 200rem;
+}
 .accordion {
   font-family: 'Unbounded', cursive;
   width: 60rem;
@@ -82,7 +84,7 @@ h1 {
   background-color: azure;
   padding: 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 15px var(--clr-neon);
+  box-shadow: 0 0 1.5rem var(--clr-neon);
   margin: 0.5rem 0;
 }
 
@@ -113,7 +115,7 @@ h1 {
 }
 
 .accordion-item-body {
-  max-height: 0px;
+  max-height: 0rem;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
@@ -131,11 +133,11 @@ h1 {
 }
 
 .logo-container {
-  position: absolute;
-  margin-top: 0px;
+  position: fixed;
+  margin-bottom: 0rem;
   margin-left: 2rem;
-  height: 55px;
-  width: 65px;
+  height: 5rem;
+  width: 4rem;
   display: inline-block;
 }
 /* .accordion-item-header.active + .accordion-item-body {

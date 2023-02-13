@@ -85,11 +85,36 @@ const makeNegative = function (e) {
   }
 };
 
-console.log(makeNegative(0.12));
-function spinWords(string) {
-  return string.replace(/\w{5,}/g, function (w) {
-    return w.split('').reverse().join('');
-  });
-}
+//////////////////////////////
+/////// Smooth scrolling//////
+const allLinks = document.querySelectorAll('a:link');
 
-console.log(btnStop);
+allLinks.forEach(function (l) {
+  l.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = l.getAttribute('href');
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+//////////////////////////////
+//////Sticky navigation///////
+const sectionObserveElement = document.querySelector('.part-1');
+const observer = new IntersectionObserver(
+  function (e) {
+    const ent = e[0];
+    console.log(ent);
+    if (ent.isIntersecting === false) {
+      document.querySelector('.headers').classList.add('sticky');
+    }
+  },
+  {
+    //in the view port
+    root: null,
+    threshold: 0,
+  }
+);
+observer.observe(sectionObserveElement);
