@@ -102,19 +102,22 @@ allLinks.forEach(function (l) {
 
 //////////////////////////////
 //////Sticky navigation///////
-const sectionObserveElement = document.querySelector('.part-1');
-const observer = new IntersectionObserver(
-  function (e) {
-    const ent = e[0];
-    console.log(ent);
-    if (ent.isIntersecting === false) {
-      document.querySelector('.headers').classList.add('sticky');
-    }
-  },
-  {
-    //in the view port
-    root: null,
-    threshold: 0,
-  }
-);
-observer.observe(sectionObserveElement);
+const nav = document.querySelector('.headers');
+const header = document.querySelector('.part-1');
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
