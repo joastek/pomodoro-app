@@ -14,22 +14,24 @@ body {
 h1 {
   font-family: 'Unbounded', cursive;
   text-align: center;
-  font-size: 3.5rem;
-  height: 4rem;
+  min-height: 10rem;
+  font-size: 5rem;
 }
-
 .headers {
-  padding: 1.5rem;
+  padding: 1.5%;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
   text-align: right;
-  font-size: 1.75rem;
+  font-size: 200%;
   color: black;
-  word-spacing: 2rem;
+
   font-weight: bold;
-  max-height: 5rem;
+  max-height: 15%;
   position: relative;
+  max-width: 100%;
+  margin-right: 0px;
+  place-items: center;
 }
 .sticky {
   position: fixed;
@@ -53,13 +55,13 @@ h1 {
 .instruction {
   margin-left: auto;
   margin-right: auto;
-  width: 30rem;
+  max-width: 40rem;
   /* height: 200px; */
   background-color: white;
-  height: 5rem;
+  height: 6rem;
   border-radius: 7rem;
   margin-top: 10rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   box-shadow: 0 0 2.5rem var(--clr-neon);
 }
 
@@ -73,7 +75,7 @@ h1 {
 .accordion {
   font-family: 'Unbounded', cursive;
   width: 60rem;
-  max-width: 50rem;
+  max-width: 80%;
   margin: 3rem auto;
   background-color: var(--clr-bg);
   margin-bottom: 10rem;
