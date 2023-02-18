@@ -18,29 +18,33 @@ h1 {
   font-size: 5rem;
 }
 .headers {
-  padding: 1.5%;
+  padding: 1.5rem;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
   text-align: right;
-  font-size: 200%;
+  font-size: 2rem;
   color: black;
 
   font-weight: bold;
-  max-height: 15%;
+  max-height: 6rem;
   position: relative;
-  max-width: 100%;
-  margin-right: 0px;
+  max-width: 200rem;
+  margin-right: 0rem;
   place-items: center;
 }
 .sticky {
   position: fixed;
-  width: 100%;
+  max-width: 400rem;
+  margin-right: 0rem;
+  max-height: 6rem;
+  font-size: 2rem;
+  max-height: 6rem;
   top: 0;
   bottom: 0;
   background-color: #fff;
   opacity: 0.9;
-  z-index: 999;
+  /* z-index: 1; */
 }
 .header-1 {
   text-decoration: none;
@@ -75,7 +79,7 @@ h1 {
 .accordion {
   font-family: 'Unbounded', cursive;
   width: 60rem;
-  max-width: 80%;
+  max-width: 70rem;
   margin: 3rem auto;
   background-color: var(--clr-bg);
   margin-bottom: 10rem;
