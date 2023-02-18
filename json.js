@@ -121,3 +121,16 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+/// opening links
+const raz = document.querySelector('.raz');
+const buttonRaz = function () {
+  raz.textContent = 'dwa';
+  raz.addEventListener('click', () => {
+    console.log('work');
+  });
+};
+raz.addEventListener('click', () => {
+  window.open('languages/polish.html');
+  console.log('work');
+});

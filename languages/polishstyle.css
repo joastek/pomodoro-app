@@ -1,1 +1,239 @@
 @import url(style.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--clr-bg);
+}
+h1 {
+  font-family: 'Unbounded', cursive;
+  text-align: center;
+  min-height: 10rem;
+  font-size: 5rem;
+}
+.headers {
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  text-align: right;
+  font-size: 2rem;
+  color: black;
+
+  font-weight: bold;
+  max-height: 6rem;
+  position: relative;
+  max-width: 200rem;
+  margin-right: 0rem;
+  place-items: center;
+}
+.sticky {
+  position: fixed;
+  max-width: 400rem;
+  margin-right: 0rem;
+  max-height: 6rem;
+  font-size: 2rem;
+  max-height: 6rem;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.9;
+  z-index: 1;
+}
+.header-1 {
+  text-decoration: none;
+  color: black;
+}
+.header-2 {
+  position: absolute;
+  left: 2rem;
+  text-decoration: none;
+  color: black;
+}
+.instruction {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40rem;
+  /* height: 200px; */
+  background-color: white;
+  height: 6rem;
+  border-radius: 7rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 0 2.5rem var(--clr-neon);
+}
+
+.part-1 {
+  padding: 2rem;
+}
+.accordion-container {
+  padding: 0.5rem;
+  margin-bottom: 200rem;
+}
+.accordion {
+  font-family: 'Unbounded', cursive;
+  width: 60rem;
+  max-width: 70rem;
+  margin: 3rem auto;
+  background-color: var(--clr-bg);
+  margin-bottom: 10rem;
+  padding: 2rem;
+}
+
+.accordion-item {
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 1.5rem var(--clr-neon);
+  margin: 0.5rem 0;
+}
+
+.accordion-item-header {
+  min-height: 1rem;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.25rem;
+}
+.number {
+  color: gray;
+  margin-right: 1rem;
+}
+
+.accordion-item-header::after {
+  content: '\002B';
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.5rem;
+  transition: transform 1s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+  content: '+';
+  transform: rotate(135deg);
+}
+
+.accordion-item-body {
+  max-height: 0rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 0.5rem;
+  line-height: 1rem;
+  border-top: 0.1rem solid;
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--clr-neon),
+      transparent
+    )
+    1;
+}
+
+.logo-container {
+  position: fixed;
+  margin-bottom: 0rem;
+  margin-left: 2rem;
+  height: 5rem;
+  width: 4rem;
+  display: inline-block;
+}
+/* .accordion-item-header.active + .accordion-item-body {
+    max-height: 500px;
+  } */
+
+.timer-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 32rem;
+  /* height: 200px; */
+  background-color: white;
+  text-align: center;
+  border-radius: 7rem;
+  margin-top: 10rem;
+  box-shadow: 0 0 5rem var(--clr-neon);
+}
+.timer {
+  text-align: center;
+  font-size: 7rem;
+  padding: 5rem;
+}
+.controlPanel-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.button-stop,
+.button-start,
+.button-reset {
+  display: grid;
+  font-size: 2rem;
+  color: var(--clr-neon);
+  cursor: pointer;
+  text-decoration: none;
+  border: var(--clr-neon) 0.2em solid;
+  padding: 0.25em 0.5em;
+  border-radius: 1rem;
+  text-shadow: 0 0 0.2em hsl(0 0% 100%/0.3), 0 0 0.3em currentColor;
+  box-shadow: inset 0 0 0.2em var(--clr-neon), 0 0 0.2em var(--clr-neon);
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+  width: 20rem;
+}
+
+.button-stop::before,
+.button-start::before,
+.button-reset::before {
+  content: '';
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(30deg) scale(0.8, 0.4);
+  filter: blur(1em);
+
+  pointer-events: none;
+}
+
+.button-stop::after,
+.button-start::after,
+.button-reset::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 1000ms;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+}
+.button-stop:hover,
+.button-stop:focus,
+.button-start:hover,
+.button-start:focus,
+.button-reset:hover,
+.button-reset:focus {
+  background: var(--clr-neon);
+  color: var(--clr-bg);
+}
+.button-stop:hover::after,
+.button-start:hover::after,
+.button-reset:hover::after {
+  opacity: 1;
+}
