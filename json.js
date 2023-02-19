@@ -134,3 +134,22 @@ raz.addEventListener('click', () => {
   window.open('languages/polish.html');
   console.log('work');
 });
+const polish = document.querySelector('.polish');
+polish.addEventListener('click', () => {
+  window.open('languages/polish/polish.html');
+});
+
+///dropdown slider
+const dropDownBtn = document.querySelector('.header-2');
+const dropDOwnMenu = document.querySelector('.language__box');
+
+dropDownBtn.addEventListener('click', () => {
+  //get drowndop menu
+  dropDOwnMenu.classList.toggle('hide');
+});
+window.addEventListener('click', e => {
+  console.log('hi');
+  if (e.target !== dropDownBtn) {
+    dropDOwnMenu.classList.add('hide');
+  }
+});
