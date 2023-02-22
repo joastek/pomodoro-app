@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 16%);
@@ -52,8 +53,7 @@ h1 {
   width: 13rem;
   text-align: center;
 }
-.header-2 {
-}
+
 .header-3 {
   position: absolute;
   left: 2rem;
