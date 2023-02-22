@@ -1,23 +1,14 @@
+@import 'base/animations';
 @import 'base/base';
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-:root {
-  --clr-neon: hsl(317 100% 54%);
-  --clr-bg: hsl(323 21% 16%);
-}
-body {
-  font-family: sans-serif;
-  background-color: $bg-color;
-}
-h1 {
-  font-family: 'Unbounded', cursive;
-  text-align: center;
-  min-height: 10rem;
-  font-size: 5rem;
-}
+@import 'base/typography';
+@import 'base/utilites';
+
+@import 'abstract/functions';
+@import 'abstract/mixins';
+@import 'abstract/variables';
+
+@import 'pages/home';
+
 .headers {
   display: flex;
   justify-content: flex-end;
