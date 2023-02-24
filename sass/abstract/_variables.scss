@@ -2,3 +2,20 @@
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 16%);
 }
+.headers {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  align-items: center;
+  background-color: #fdf2e9;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  max-height: 6rem;
+  max-width: 100%;
+  margin-right: 0rem;
+  text-decoration: none;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
