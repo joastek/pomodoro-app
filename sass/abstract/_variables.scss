@@ -19,3 +19,26 @@
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
+.header {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  background-color: $neon-color;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  width: 13rem;
+  text-align: center;
+}
+.language__box {
+  position: absolute;
+  background-color: yellow;
+
+  right: 15.5rem;
+  margin-top: 3rem;
+  padding: 1.2rem;
+  width: 13rem;
+  box-shadow: 0 0 2rem var(--clr-neon);
+  border-radius: 2rem;
+  transition: all 0.25s ease-in; /* here */
+  transform: translateY(-10px); /* here */
+}

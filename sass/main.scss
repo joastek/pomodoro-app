@@ -9,7 +9,6 @@
 @import 'components/buttons.scss';
 @import 'pages/home';
 
-
 .sticky {
   position: fixed;
 
@@ -17,16 +16,6 @@
   background-color: #fff;
   opacity: 0.9;
   z-index: 1;
-}
-.header {
-  text-decoration: none;
-  color: black;
-  padding: 1rem;
-  background-color: $neon-color;
-  border-radius: 2rem;
-  margin-left: 1rem;
-  width: 13rem;
-  text-align: center;
 }
 
 .header-3 {
@@ -48,19 +37,7 @@
   margin-top: 1rem;
   margin-left: 1rem;
 }
-.language__box {
-  position: absolute;
-  background-color: yellow;
 
-  right: 15.5rem;
-  margin-top: 3rem;
-  padding: 1.2rem;
-  width: 13rem;
-  box-shadow: 0 0 2rem var(--clr-neon);
-  border-radius: 2rem;
-  transition: all 0.25s ease-in; /* here */
-  transform: translateY(-10px); /* here */
-}
 /* .dropdown {
   width: 13rem;
   display: block;
