@@ -45,12 +45,6 @@
   margin-top: 0rem;
   margin-left: 0rem;
 } */
-.hide {
-  display: none;
-  z-index: 1;
-  transition: all 0.25s ease-in; /* here */
-  transform: translateY(-10px); /* here */
-}
 
 .headers::after {
   transition-property: transform;
